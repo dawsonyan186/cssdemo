@@ -1,0 +1,36 @@
+ <ul id="menu" class="undecorated"> 
+    <li id="menuHome"><a href="/">Home</a> </li> 
+    <li id="menuAbout"><a href="/Usergroup/About">About</a> </li> 
+    <li id="menuArchives"><a href="/Usergroup/Archives">Archives</a> </li> 
+    <li id="menuLinks"><a href="/Usergroup/Links">Links</a> </li> 
+</ul> 
+<script
+  src="http://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+<script>
+function moveUp($item) {
+    $before = $item.prev();
+    $item.insertBefore($before);
+}
+
+function moveDown($item) {
+    debugger;
+    $after = $item.next();
+    $item.insertAfter($after);
+}
+
+$.fn.moveUp = function() {
+    debugger;
+    before = $(this).prev();
+    $(this).insertBefore(before);
+}
+
+$.fn.moveDown = function() {
+    debugger;
+    after = $(this).next();
+    $(this).insertAfter(after);
+}
+
+$("#menuAbout").moveDown();
+</script>

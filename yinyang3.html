@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    .yinyang {
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+        border-radius: 50%;
+        background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #000000 51%, #000000 100%);
+        position: relative;
+    }
+
+    .yinyang::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        border: 40px solid #000;
+        background: #fff;
+        top: 50px;
+        left: 0px
+    }
+
+    .yinyang::after {
+        content: '';
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        background: #000;
+        border: 40px solid #fff;
+        top: 50px;
+        right: 0px
+    }
+    </style>
+</head>
+
+<body>
+    <div class="yinyang">
+    </div>
+</body>
+
+</html>
